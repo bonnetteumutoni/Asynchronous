@@ -100,9 +100,7 @@ loadPage();
 
 
 // Create a function fetchPrice(symbol) that returns a Promise.
-// After 2 seconds, resolve with a message "Price for [symbol] retrieved".
-// Use async/await to fetch multiple stock prices.
-
+// After 2 seconds, resolve with a message "Price for [symbol] retrieved". Use async/await to fetch multiple stock prices.
 function fetchPrice(symbol) {
  return new Promise(resolve => {
   setTimeout(() => {
