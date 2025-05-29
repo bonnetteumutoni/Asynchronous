@@ -1,7 +1,7 @@
-// Define an async function sendReminder(email).
-// Inside, wait for 5 seconds.
-// Then log "Reminder sent to [email]".
-// Call this function for 3 different users.
+// Create an async function sendEmailReminder(email).
+// set timeout and , wait for 5 seconds.
+// Display "Reminder sent to [email]".
+// Use the function for 3 different users.
 
 
 const sendEmailReminder = (email) => {
@@ -26,25 +26,25 @@ const sendRemindersAsync = async () => {
 };
 sendRemindersAsync();
 
-// Create a function tryLogin using a counter.
+// Create a function Login using a counter.
 // Use a Promise to simulate delay and login attempts.
-// First two attempts fail, third one succeeds.
-// If login successful on 3rd attempt, log "Login successful".
-// If all 3 attempts fail, log "Login failed after 3 attempts".
+// First two counts fail, third one succeeds.
+// If login successful on 3rd count, display "Login successful".
+// If all 3 counts fail, log "Login failed after 3 attempts".
 
-function tryLogin() {
- let attempt = 0;
+function Login() {
+ let count = 0;
  function attemptLogin() {
   return new Promise((resolve, reject) => {
    setTimeout(() => {
-    attempt++;
-    if (attempt === 3) {
+    count++;
+    if (count === 3) {
      resolve("Login successful");
-    } else if (attempt < 3) {
-     console.log(`Attempt ${attempt}: Failed`);
+    } else if (count < 3) {
+     reject(`Attempt ${count}: Failed`);
      resolve(attemptLogin());
     }
-   }, 1000); // 1 second delay
+   }, 1000); 
   });
  }
  attemptLogin().then(result => {
@@ -55,9 +55,9 @@ function tryLogin() {
 }
 
 
-// Start a countdown from 5 to 0 using setInterval.
-// Each second, log the current number.
-// When it reaches 0, stop the interval and log "Time’s up!".
+// Create a countdown from 5 to 0 using setInterval.
+// Each second, display the current number.
+// When it reaches 0, stop the interval and display "Time’s up!".
 
 const countdownTimer=() =>{
   let count = 5;
@@ -78,10 +78,10 @@ countdownTimer();
 
 
 // Create an async function loadPage.
-// Log "Loading header...", wait 1 second.
-// Log "Loading content...", wait 2 seconds.
-// Log "Loading footer...", wait 1 second.
-// Finally, log "Page fully loaded".
+// display "Loading header...", wait 1 second.
+// display "Loading content...", wait 2 seconds.
+// display "Loading footer...", wait 1 second.
+// Finally, display "Page fully loaded".
 
 function delay(ms) {
  return new Promise(resolve => setTimeout(resolve, ms));
